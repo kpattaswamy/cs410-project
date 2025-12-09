@@ -42,3 +42,6 @@ Stands up the trained model locally and takes input of a ticker symbol and text.
 
 * Test Accuracy: 0.5696
 * Test F1: 0.5401
+
+### Example local deployment of the model responding to a prompt:
+![Alt text](image.png?raw=true "Example prompt and response")
