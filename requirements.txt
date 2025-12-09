@@ -2,3 +2,10 @@ pandas
 yfinance
 requests
 numpy
+torch
+scikit-learn
+accelerate
+transformers==4.21.0
+datasets==2.10.1
+scikit-learn
+accelerate
