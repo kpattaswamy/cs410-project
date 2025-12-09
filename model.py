@@ -9,17 +9,11 @@ from sklearn.model_selection import train_test_split
 import warnings
 warnings.filterwarnings("ignore")
 
-# Load and preprocess dataset
 reddit_data = pd.read_csv("preprocessed-dataset/labeled.csv")
-
-# Filter out unknown cases (-1) and map to binary labels (0=down, 1=up)
 reddit_data = reddit_data[reddit_data['next_day_movement'] != -1].copy()
 reddit_data['label'] = reddit_data['next_day_movement'].map({0: 0, 1: 1})
 
-# Combine title and selftext (handle NaN selftext)
 reddit_data['text'] = reddit_data['title'].fillna('') + ' ' + reddit_data['selftext'].fillna('')
-
-# Remove rows with empty text
 reddit_data = reddit_data[reddit_data['text'].str.strip() != ''].copy()
 
 print(f"Dataset size after filtering: {len(reddit_data)}")

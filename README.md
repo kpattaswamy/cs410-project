@@ -36,6 +36,9 @@ python3 predict.py
 Stands up the trained model locally and takes input of a ticker symbol and text. It then predicts if price will move up or down.
 
 ### Results while testing
-Epoch 1/3, Average Loss: 0.6947
-Epoch 2/3, Average Loss: 0.6596
-Epoch 3/3, Average Loss: 0.5863
+* Epoch 1/3, Average Loss: 0.6947
+* Epoch 2/3, Average Loss: 0.6596
+* Epoch 3/3, Average Loss: 0.5863
+
+* Test Accuracy: 0.5696
+* Test F1: 0.5401
