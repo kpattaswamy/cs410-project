@@ -43,11 +43,12 @@ def predict_stock_movement(text):
     }
 
 print("\n" + "="*60)
-print("Model is live, 'quit' to exit:")
+print("Model is live!")
 while True:
     text = input("\nEnter Reddit post: ")
-    if text.lower() in ['quit', 'exit', 'q']:
+    if text.lower() == "exit":
         break
     result = predict_stock_movement(text)
+    print("\n")
     print(f"Prediction: **{result['prediction']}** ({result['confidence']:.1%} confidence)")
     print(f"P(UP): {result['prob_up']:.1%} | P(DOWN): {result['prob_down']:.1%}\n")
